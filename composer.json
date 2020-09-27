@@ -1,0 +1,57 @@
+{
+    "name": "llewdur/boilerplate",
+    "description": "A TDD based Laravel boilerplate",
+    "keywords": [
+        "llewdur",
+        "boilerplate"
+    ],
+    "homepage": "https://github.com/llewdur/boilerplate",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Llewellyn",
+            "email": "Llewellyn@zekini.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0",
+        "nunomaduro/larastan": "^0.6.4",
+        "symplify/easy-coding-standard": "^8.3",
+        "vimeo/psalm": "^3.16"
+    },
+    "autoload": {
+        "psr-4": {
+            "Llewdur\\Boilerplate\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Llewdur\\Boilerplate\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Llewdur\\Boilerplate\\BoilerplateServiceProvider"
+            ],
+            "aliases": {
+                "Boilerplate": "Llewdur\\Boilerplate\\BoilerplateFacade"
+            }
+        }
+    }
+}

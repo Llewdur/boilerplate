@@ -39,8 +39,8 @@
     "scripts": {
         "test": "vendor/bin/phpunit",
         "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
-        "post-root-package-install": [
-            "copy('vendor/llewdur/boilerplate/ecs.php', 'ecs.php');\""
+        "post-package-update": [
+            "php -r \"copy('vendor/llewdur/boilerplate/ecs.php', 'ecs.php');\""
         ]
     },
     "config": {

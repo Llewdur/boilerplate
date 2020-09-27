@@ -21,7 +21,7 @@
         "nunomaduro/larastan": "^0.6.4",
         "arcanedev/log-viewer": "^7.0",
         "darkaonline/l5-swagger": "^8.0",
-        "laravel/horizon": "^4.1",
+        "laravel/horizon": "^5.0",
         "laravel/passport": "^10.0",
         "league/flysystem-aws-s3-v3": "~1.0",
         "predis/predis": "^1.1",

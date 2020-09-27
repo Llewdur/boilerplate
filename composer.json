@@ -17,12 +17,12 @@
     ],
     "require": {
         "php": "^7.4",
-        "illuminate/support": "^8.0"
+        "illuminate/support": "^8.0",
+        "nunomaduro/larastan": "^0.6.4"
     },
     "require-dev": {
         "orchestra/testbench": "^4.0",
         "phpunit/phpunit": "^8.0",
-        "nunomaduro/larastan": "^0.6.4",
         "symplify/easy-coding-standard": "^8.3",
         "vimeo/psalm": "^3.16"
     },
@@ -38,8 +38,10 @@
     },
     "scripts": {
         "test": "vendor/bin/phpunit",
-        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
-
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
+        "post-root-package-install": [
+            "copy('vendor/llewdur/boilerplate/ecs.php', 'ecs.php');\""
+        ]
     },
     "config": {
         "sort-packages": true
